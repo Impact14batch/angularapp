@@ -1,0 +1,115 @@
+Trigger event :
+An event in the real world of healthcare creates the need for data to flow among systems
+Basically  trigger event  is sending a message from one system to another system.
+ It represents a specific action or event that triggers the sending or receiving of HL7 messages. 
+Each HL7 message is associated with a trigger event that indicates the purpose or reason for the message exchange. 
+
+types of trigger events such as patient admission,lab test order, or discharge ,results (ADT,ORM,ORU).
+
+what is HL7?
+
+Hl7 is set of standards used in heathcare to make different computer systems used by hospitals and healthcare providers work together.
+
+
+why Hl7: 
+ In all hospitals or healthcare provider organizations, hospital activities such as billing records or 
+patient tracking are usually handled by various computer systems. 
+▪ Ideally, these systems should be communicating / interfacing with each other on receiving 
+information.
+▪ This sharing and receiving of information should be based on a standard-based messaging
+▪ HL7 helps healthcare systems to communicate through a set of hl7-defined but flexible standard 
+using its guidelines and methodologies. 
+▪ These guidelines are set of rules that enable information sharing and processing in a manner that 
+is standard and consistent enabling smooth sharing of clinical information between healthcare 
+organizations.
+▪ Ideally, this information sharing should help curb the occurrence of geographically-isolated and 
+highly-variable medical care.
+
+Communication standard:Hl7 helps different health care systems (like hospitals and labs and clinics) share patient information and communicate via each other.
+
+data sharing: mainly it ensures that medical data like patient records ,lab results and treatment information can be exchanged between the different computer systems
+
+
+What is Ack in Hl7?
+
+
+HL7 is a standard for exchanging health information between different computer systems. 
+When a message is sent from one system to another, HL7 defines how the receiving system should acknowledge that it has received the message. 
+There are two types of acknowledgement modes: Original Mode ACK and Enhanced Mode ACK. 
+In Original Mode ACK, the receiving system simply acknowledges that it has received the message. 
+In Enhanced Mode ACK, the receiving system also acknowledges whether the message was processed successfully.
+
+Original Mode:
+for example,
+The ACK message in Original Mode confirms the message's successful delivery without providing detailed error information or segment-level acknowledgments.
+Enhanced mode
+
+For example, if there was an issue with a specific test requested in the ORM message, 
+the Enhanced Mode ACK can include an error code and description related to that particular test, 
+facilitating better error identification and resolution.
+
+once you send message two actions need to perform
+Whether the message was received properly.
+Whether the message was processed properly.
+Ack stands for apllication acknowldgement. it is a message type it is used wheather message will be received or not 
+mainly the ACK message informs that sender about the status of the received message 
+
+various types of ack messages in HL7:
+
+AA: if the message was succesfully processed you will get positive Positive acknowledgement that is AA
+
+AE: the errors were encountered while processing the message , if you saw ack type your getting AE then you need to understood problem with message while processing 
+
+AR: when the receiving system output rejects the message due to server issues or incompleteness then you will get AR
+
+
+
+
+
+
+
+Patient Visit. This segment contains information about patient visit details such as servicing facility, attending doctor, and visit ID. This segment is required.
+
+
+
+
+What is Mirth Connect?
+▪ Mirth Connect is a crossplatform HL7 interface engine that enables bidirectional sending of HL7 messages betweensystems and applications over multiple transports
+▪ Mirth Connect uses a channel-based architecture to connect HIT systems and allow messages to be filtered, transformed, and routed based on user-defined rules.
+▪ It’s open source and hence you have advantage of a large community of users with commercial quality support.
+
+Logs:
+▪ Server Logs: Displays information about channel performance and general server logs
+▪ Connection Logs: Displays information related to connection attempts to the channel, connector name and messages that were exchanged during the connection
+
+Transformer:
+Transformers are rules that change and rearrange the data in the source message to create the destination message
+In Destination Each destination can have its own transformation which is defined in the respective destination transformer
+Source page transformer applies the transformation and hands over the message to the destination(s)
+
+
+TCP Listener:
+TCP Listener simplifies the process of listening for and accepting incoming connection requests, making it easier to create server applications that can communicate over a network.
+
+
+Logs in Mirth:
+
+In Mirth Connect, logs are records of events that happen while channels are processing messages. 
+They are crucial for monitoring the health of your interfaces, troubleshooting issues, and understanding the flow of data through your system.
+
+Channel Logs: These are logs specific to a channel.They include connector messages, errors, and any custom log messages you’ve added to your channel.
+
+Server Logs:   These are logs for the Mirth Connect server as a whole. 
+                       They include information about server startup and shutdown, deployment and undeployment of channels, and any errors that occur at the server level.
+
+Dashboard:     The Mirth Connect dashboard provides a partial view of the log. You can filter this view by log level (ERROR, WARN, INFO, DEBUG) and by channel.
+
+Log Files:         Mirth Connect writes its logs to files on the server. The location of these files can be configured in the Mirth Connect Administrator.
+
+Custom Logging: You can add custom log messages to your channels using the logger object in your JavaScript code.
+
+
+
+
+
+
